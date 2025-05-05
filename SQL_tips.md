@@ -705,4 +705,23 @@ END;
 - Условной агрегации
 - Динамической сортировки
 - Замены сложных JOIN для простых маппингов
+
+---
+
+# COALESCE в SQL
+
+**Функция COALESCE** возвращает первое не-NULL значение из списка аргументов.
+
+## Синтаксис
+```sql
+COALESCE(expr1, expr2, ..., exprN)
+```
+
+## Примеры
+```sql
+-- Замена NULL на значение по умолчанию
+SELECT COALESCE(column_name, 'N/A') FROM table;
+
+-- Выбор первого не-NULL значения из нескольких колонок
+SELECT COALESCE(col1, col2, col3, 'fallback') FROM table;
 ```
